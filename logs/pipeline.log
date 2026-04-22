@@ -1,0 +1,95 @@
+2026-04-23 01:04:23,274 — INFO — ========== PIPELINE RUN STARTED ==========
+2026-04-23 01:04:23,274 — INFO — EXTRACT phase started
+2026-04-23 01:04:23,276 — ERROR — EXTRACT failed: [Errno 2] No such file or directory: 'data/raw/suppliers.csv'
+2026-04-23 01:04:23,276 — ERROR — PIPELINE FAILED: [Errno 2] No such file or directory: 'data/raw/suppliers.csv'
+2026-04-23 01:05:44,699 — INFO — ========== PIPELINE RUN STARTED ==========
+2026-04-23 01:05:44,699 — INFO — EXTRACT phase started
+2026-04-23 01:05:44,700 — ERROR — EXTRACT failed: [Errno 2] No such file or directory: 'E:\\LLM_Projects\\Retail Inventory ETL Pipeline\\inventory_etl_pipeline\\data/raw/suppliers.csv'
+2026-04-23 01:05:44,700 — ERROR — PIPELINE FAILED: [Errno 2] No such file or directory: 'E:\\LLM_Projects\\Retail Inventory ETL Pipeline\\inventory_etl_pipeline\\data/raw/suppliers.csv'
+2026-04-23 01:07:46,156 — INFO — ========== PIPELINE RUN STARTED ==========
+2026-04-23 01:07:46,156 — INFO — EXTRACT phase started
+2026-04-23 01:07:46,274 — INFO — Extracted — suppliers:10, products:50, stock:50, sales:500
+2026-04-23 01:07:46,274 — INFO — Validation started
+2026-04-23 01:07:46,283 — INFO — Validation passed
+2026-04-23 01:07:46,284 — INFO — TRANSFORM phase started
+2026-04-23 01:07:46,291 — INFO — Products cleaned — 50 rows retained
+2026-04-23 01:07:46,304 — INFO — Sales cleaned — dropped 10 null rows, 490 rows retained
+2026-04-23 01:07:46,315 — INFO — TRANSFORM phase complete
+2026-04-23 01:07:47,019 — INFO — Schema created/verified
+2026-04-23 01:07:47,207 — ERROR — PIPELINE FAILED: (psycopg2.errors.DependentObjectsStillExist) cannot drop table dim_supplier because other objects depend on it
+DETAIL:  constraint dim_product_supplier_id_fkey on table dim_product depends on table dim_supplier
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+
+[SQL: 
+DROP TABLE dim_supplier]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2026-04-23 01:08:33,487 — INFO — ========== PIPELINE RUN STARTED ==========
+2026-04-23 01:08:33,487 — INFO — EXTRACT phase started
+2026-04-23 01:08:33,496 — INFO — Extracted — suppliers:10, products:50, stock:50, sales:500
+2026-04-23 01:08:33,496 — INFO — Validation started
+2026-04-23 01:08:33,498 — INFO — Validation passed
+2026-04-23 01:08:33,499 — INFO — TRANSFORM phase started
+2026-04-23 01:08:33,501 — INFO — Products cleaned — 50 rows retained
+2026-04-23 01:08:33,507 — INFO — Sales cleaned — dropped 10 null rows, 490 rows retained
+2026-04-23 01:08:33,521 — INFO — TRANSFORM phase complete
+2026-04-23 01:08:33,705 — INFO — Schema created/verified
+2026-04-23 01:08:33,732 — INFO — Schema created/verified
+2026-04-23 01:08:33,750 — INFO — Loaded 10 rows into dim_supplier
+2026-04-23 01:08:33,763 — INFO — Loaded 50 rows into dim_product
+2026-04-23 01:08:33,777 — INFO — Loaded 274 rows into dim_date
+2026-04-23 01:08:33,812 — INFO — Loaded 490 rows into fact_sales
+2026-04-23 01:08:33,817 — INFO — Loaded 50 rows into fact_stock
+2026-04-23 01:08:33,817 — INFO — ========== PIPELINE RUN COMPLETED ==========
+2026-04-23 01:10:09,001 — INFO — Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-23 01:10:09,002 — INFO — Scheduler started
+2026-04-23 01:10:09,003 — INFO — Added job "run_pipeline" to job store "default"
+2026-04-23 01:10:09,003 — INFO — Scheduler started
+2026-04-23 01:11:09,014 — INFO — Running job "run_pipeline (trigger: interval[0:01:00], next run at: 2026-04-23 01:11:09 IST)" (scheduled at 2026-04-23 01:11:09.001432+05:30)
+2026-04-23 01:11:09,014 — INFO — ========== PIPELINE RUN STARTED ==========
+2026-04-23 01:11:09,015 — INFO — EXTRACT phase started
+2026-04-23 01:11:09,035 — INFO — Extracted — suppliers:10, products:50, stock:50, sales:500
+2026-04-23 01:11:09,036 — INFO — Validation started
+2026-04-23 01:11:09,043 — INFO — Validation passed
+2026-04-23 01:11:09,043 — INFO — TRANSFORM phase started
+2026-04-23 01:11:09,048 — INFO — Products cleaned — 50 rows retained
+2026-04-23 01:11:09,059 — INFO — Sales cleaned — dropped 10 null rows, 490 rows retained
+2026-04-23 01:11:09,069 — INFO — TRANSFORM phase complete
+2026-04-23 01:11:09,228 — INFO — Schema created/verified
+2026-04-23 01:11:09,288 — INFO — Schema created/verified
+2026-04-23 01:11:09,311 — INFO — Loaded 10 rows into dim_supplier
+2026-04-23 01:11:09,321 — INFO — Loaded 50 rows into dim_product
+2026-04-23 01:11:09,336 — INFO — Loaded 274 rows into dim_date
+2026-04-23 01:11:09,369 — INFO — Loaded 490 rows into fact_sales
+2026-04-23 01:11:09,376 — INFO — Loaded 50 rows into fact_stock
+2026-04-23 01:11:09,376 — INFO — ========== PIPELINE RUN COMPLETED ==========
+2026-04-23 01:11:09,376 — INFO — Job "run_pipeline (trigger: interval[0:01:00], next run at: 2026-04-23 01:12:09 IST)" executed successfully
+2026-04-22 20:26:33,075 â€” INFO â€” ========== PIPELINE RUN STARTED ==========
+2026-04-22 20:26:33,076 â€” INFO â€” EXTRACT phase started
+2026-04-22 20:26:33,103 â€” INFO â€” Extracted â€” suppliers:10, products:50, stock:50, sales:500
+2026-04-22 20:26:33,103 â€” INFO â€” Validation started
+2026-04-22 20:26:33,105 â€” INFO â€” Validation passed
+2026-04-22 20:26:33,106 â€” INFO â€” TRANSFORM phase started
+2026-04-22 20:26:33,108 â€” INFO â€” Products cleaned â€” 50 rows retained
+2026-04-22 20:26:33,115 â€” INFO â€” Sales cleaned â€” dropped 10 null rows, 490 rows retained
+2026-04-22 20:26:33,123 â€” INFO â€” TRANSFORM phase complete
+2026-04-22 20:26:33,227 â€” ERROR â€” PIPELINE FAILED: (psycopg2.OperationalError) connection to server at "postgres" (172.19.0.2), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 20:27:43,504 â€” INFO â€” ========== PIPELINE RUN STARTED ==========
+2026-04-22 20:27:43,504 â€” INFO â€” EXTRACT phase started
+2026-04-22 20:27:43,524 â€” INFO â€” Extracted â€” suppliers:10, products:50, stock:50, sales:500
+2026-04-22 20:27:43,525 â€” INFO â€” Validation started
+2026-04-22 20:27:43,527 â€” INFO â€” Validation passed
+2026-04-22 20:27:43,527 â€” INFO â€” TRANSFORM phase started
+2026-04-22 20:27:43,530 â€” INFO â€” Products cleaned â€” 50 rows retained
+2026-04-22 20:27:43,535 â€” INFO â€” Sales cleaned â€” dropped 10 null rows, 490 rows retained
+2026-04-22 20:27:43,543 â€” INFO â€” TRANSFORM phase complete
+2026-04-22 20:27:43,686 â€” INFO â€” Schema created/verified
+2026-04-22 20:27:43,720 â€” INFO â€” Schema created/verified
+2026-04-22 20:27:43,749 â€” INFO â€” Loaded 10 rows into dim_supplier
+2026-04-22 20:27:43,757 â€” INFO â€” Loaded 50 rows into dim_product
+2026-04-22 20:27:43,770 â€” INFO â€” Loaded 274 rows into dim_date
+2026-04-22 20:27:43,799 â€” INFO â€” Loaded 490 rows into fact_sales
+2026-04-22 20:27:43,806 â€” INFO â€” Loaded 50 rows into fact_stock
+2026-04-22 20:27:43,806 â€” INFO â€” ========== PIPELINE RUN COMPLETED ==========
